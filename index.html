@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Raihan</title>
+    <!-- link Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- link Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- link custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Library Chart.js atau grafik -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+<body class="dark-theme">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-darkblue fixed-top">
+        <div class="container">
+            <a class="navbar-brand glow-text" href="#">
+                <i class="fa fa-space-shuttle" aria-hidden="true"></i> RAIHAN RAMADHAN
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#articles">Article</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6 offset-lg-1 hero-content">
+                    <h1 class="display-4 fw-bold mb-4">Halo, Saya <span class="text-primary">Raihan</span></h1>
+                    <p class="lead mb-4">Membuat solusi digital yang inovatif dan futuristik untuk bisnis Anda.</p>
+                    <a href="#contact" class="btn btn-primary btn-lg px-4 me-2">Hubungi Saya</a>
+                    <a href="#portfolio" class="btn btn-outline-light btn-lg px-4">Gallery</a>
+                </div>
+                <div class="col-lg-5 d-flex justify-content-center justify-content-lg-end">
+                    <img src="assets/images/hero2.png" alt="Hero Image" class="img-fluid floating-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">About <span class="text-primary">Me</span></h2>
+            
+            <div class="row align-items-center g-4">
+                <div class="col-lg-4 mb-4 text-center">
+                    <img src="assets/images/hero-image.jpg" alt="Profile" class="img-fluid rounded-circle profile-img js-tilt">
+                </div>
+                <div class="col-lg-8">
+                    <h3 class="mb-3">Pengantar</h3>
+                    <p>Saya adalah seorang Web Developer yang berdedikasi untuk menciptakan solusi web yang cepat, responsif, dan elegan. Dengan latar belakang pengalaman selama 5 tahun, saya terbiasa mengembangkan tampilan antarmuka yang tidak hanya menarik, tetapi juga intuitif dan mudah digunakan oleh pengguna</p>
+                    
+                    <div class="skills-section mt-4">
+                        <h4 class="mb-4">Skill</h4>
+                        <div class="row g-3">
+                            <!-- Chart Container with responsive classes -->
+                            <div class="col-12 col-md-6 order-md-1">
+                                <div class="chart-container" style="position: relative; height: 250px;">
+                                    <canvas id="radarChart"></canvas>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 order-md-2">
+                                <div class="chart-container" style="position: relative; height: 250px;">
+                                    <canvas id="doughnutChart"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="certificates mt-5">
+                <h4 class="mid mb-4">Certificate</h4>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="fade-up-right">
+                        <div class="card bg-darkblue h-100">
+                            <img src="assets/images/cert1.jpg" class="card-img-top" alt="Sertifikat 1">
+                            <div class="card-body">
+                                <h5 class="card-title">AI-ChatGPT</h5>
+                                <p class="card-text">Soratekno - 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="zoom-out-up">
+                        <div class="card bg-darkblue h-100">
+                            <img src="assets/images/cert2.jpg" class="card-img-top" alt="Sertifikat 2">
+                            <div class="card-body">
+                                <h5 class="card-title">JavaScript Advanced</h5>
+                                <p class="card-text">Pro.Asta - 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4" data-aos="fade-up-left">
+                        <div class="card bg-darkblue h-100">
+                            <img src="assets/images/cert3.jpg" class="card-img-top" alt="Sertifikat 3">
+                            <div class="card-body">
+                                <h5 class="card-title">UI Design</h5>
+                                <p class="card-text">Hima Tekno - 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5 bg-darkblue">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">My <span class="text-primary">Service</span></h2>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-code service-icon mb-3"></i>
+                            <h4 class="card-title">Pengembangan Web</h4>
+                            <p class="card-text">Membangun website responsif dan modern dengan teknologi terbaru.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt service-icon mb-3"></i>
+                            <h4 class="card-title">Desain Responsif</h4>
+                            <p class="card-text">Memastikan website tampil sempurna di semua perangkat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card service-card h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-search service-icon mb-3"></i>
+                            <h4 class="card-title">SEO Optimization</h4>
+                            <p class="card-text">Optimasi website untuk peringkat lebih tinggi di mesin pencari.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">All About <span class="text-primary">Memories</span></h2>
+            
+            <div class="text-center mb-4">
+                <button class="btn btn-outline-primary filter-btn active" data-filter="all">Semua</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="sma">random</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="pet">pet</button>
+                <button class="btn btn-outline-primary filter-btn" data-filter="home">home</button>
+            </div>
+            
+            <div class="row portfolio-container">
+                <div class="col-md-4 mb-4 portfolio-item" data-category="sma">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_1.jpg" class="card-img-top" alt="Gallery 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Zaman Penjajahan</h5>
+                            <p class="card-text">Dengan pemuda yang dulunya memperjuangkan Indonesia.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="pet">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_8.jpg" class="card-img-top" alt="Gallery 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Kucing Tetangga</h5>
+                            <p class="card-text">Nama si Opung pencuri ikan asin.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="home">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_6.jpg" class="card-img-top" alt="Gallery 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Kampung Halaman</h5>
+                            <p class="card-text">Dibesarkan di Komplek PT. TPL Pabrik Kertas terbesar.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="sma">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_2.jpg" class="card-img-top" alt="Gallery 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Tournament HUT RI 78</h5>
+                            <p class="card-text">Berhasil menaklukkan semua tim dan menjadi tim terkuat MLBB.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="pet">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_9.jpg" class="card-img-top" alt="Gallery 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Kucing Rumahan</h5>
+                            <p class="card-text">Dengan warna yang loreng saya memeberi nama si Loreng.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="home">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_7.jpg" class="card-img-top" alt="Gallery 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Rumah Tipe A</h5>
+                            <p class="card-text">Rumah dengan sejuta kenangan dari masa kecil.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="sma">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_3.jpg" class="card-img-top" alt="Gallery 7">
+                        <div class="card-body">
+                            <h5 class="card-title">Rival kelas kami</h5>
+                            <p class="card-text">Kami membangun organinasi dengan nama PP(Pemuda Pemalas).</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="sma">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_5.jpg" class="card-img-top" alt="Gallery 9">
+                        <div class="card-body">
+                            <h5 class="card-title">Futsal Kampus</h5>
+                            <p class="card-text">Futsal bersama pak Oky dan kawan kawan.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="home">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_4.jpg" class="card-img-top" alt="Gallery 10">
+                        <div class="card-body">
+                            <h5 class="card-title">Keponakan Tercinta</h5>
+                            <p class="card-text">Menjadi paman yang keren bagi tiara.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="pet">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_10.jpg" class="card-img-top" alt="Gallery 11">
+                        <div class="card-body">
+                            <h5 class="card-title">Kucing Mahal</h5>
+                            <p class="card-text">Ke CatCoffee dengan kucing random.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="home">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_11_1.jpg" class="card-img-top" alt="Gallery 12">
+                        <div class="card-body">
+                            <h5 class="card-title">She's my Mj, My Gwen</h5>
+                            <p class="card-text">Kristiani Larosa</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 portfolio-item" data-category="pet">
+                    <div class="card portfolio-card">
+                        <img src="assets/images/img_12.jpg" class="card-img-top" alt="Gallery 13">
+                        <div class="card-body">
+                            <h5 class="card-title">Anak nya Loreng</h5>
+                            <p class="card-text">Kucing Jantan dengan nama Awu yang suka robek jok kereta.</p>
+                            <!-- <a href="#" class="btn btn-sm btn-primary">Lihat Detail</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="py-5 bg-darkblue">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">New <span class="text-primary">Article</span></h2>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card article-card h-100">
+                        <img src="assets/images/img_ar_1.jpg" class="card-img-top" alt="Article 1">
+                        <div class="card-body">
+                            <div class="article-meta mb-2">
+                                <span class="badge bg-primary me-2">Making Animations</span>
+                                <small class="text-muted">15 April 2025</small>
+                            </div>
+                            <h5 class="card-title">Pengembangan animasi lewat Unreal Engine 5</h5>
+                            <p class="card-text">Mengulas teknologi dan tren terbaru dalam pengembangan animasi dengan software Unreal Engine 5.</p>
+                            <a href="article01.html" class="btn btn-sm btn-outline-primary">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card article-card h-100">
+                        <img src="assets/images/img_ar_2.jpg" class="card-img-top" alt="Article 2">
+                        <div class="card-body">
+                            <div class="article-meta mb-2">
+                                <span class="badge bg-primary me-2">Antariksa</span>
+                                <small class="text-muted">5 April 2025</small>
+                            </div>
+                            <h5 class="card-title">Era Baru Kemajuan Peradaban</h5>
+                            <p class="card-text">Awal dan permulaan peradaban yang telah lama hilang kini telah dikembangkan oleh para ahli Antariksa.</p>
+                            <a href="article02.html" class="btn btn-sm btn-outline-primary">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card article-card h-100">
+                        <img src="assets/images/img_ar_3.jpg" class="card-img-top" alt="Article 3">
+                        <div class="card-body">
+                            <div class="article-meta mb-2">
+                                <span class="badge bg-primary me-2">Science Future</span>
+                                <small class="text-muted">25 April 2025</small>
+                            </div>
+                            <h5 class="card-title">Terobosan Teknologi Sains Modern</h5>
+                            <p class="card-text">Kita tidak lagi hanya bermimpi tentang masa depan kita sedang membangunnya hari ini.</p>
+                            <a href="article03.html" class="btn btn-sm btn-outline-primary">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card article-card h-100">
+                        <img src="assets/images/artcl04.jpg" class="card-img-top" alt="Article 3">
+                        <div class="card-body">
+                            <div class="article-meta mb-2">
+                                <span class="badge bg-primary me-2">Technology</span>
+                                <small class="text-muted">14 May 2025</small>
+                            </div>
+                            <h5 class="card-title">Agriculture Drone</h5>
+                            <p class="card-text">Drone pengangkut pupuk dan pestisida membantu para petani dalam lahan yang luas.</p>
+                            <a href="article04.html" class="btn btn-sm btn-outline-primary">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card article-card h-100">
+                        <img src="assets/images/artcl05.webp" class="card-img-top" alt="Article 3">
+                        <div class="card-body">
+                            <div class="article-meta mb-2">
+                                <span class="badge bg-primary me-2">Destination</span>
+                                <small class="text-muted">24 May 2025</small>
+                            </div>
+                            <h5 class="card-title">Earth Sentinels</h5>
+                            <p class="card-text">Perkembangan Nuanu menegaskan pentingnya patung sebagai elemen transformasi ruang publik.</p>
+                            <a href="article05.html" class="btn btn-sm btn-outline-primary">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card article-card h-100">
+                        <img src="assets/images/artcl06.jpg" class="card-img-top" alt="Article 3">
+                        <div class="card-body">
+                            <div class="article-meta mb-2">
+                                <span class="badge bg-primary me-2">Energy Source</span>
+                                <small class="text-muted">27 May 2025</small>
+                            </div>
+                            <h5 class="card-title">Uranium 235</h5>
+                            <p class="card-text">Pembangkit Listrik Tenaga Nuklir: Energi dari Inti Atom Uranium 235</p>
+                            <a href="article06.html" class="btn btn-sm btn-outline-primary">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="comments-section mt-5">
+                <h4 class="mid mb-4">Comment</h4>
+                <div class="card bg-dark p-4 mb-4">
+                    <form id="commentForm">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control bg-darker" placeholder="Nama" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control bg-darker" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control bg-darker" rows="3" placeholder="Komentar Anda" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kirim Komentar</button>
+                    </form>
+                </div>
+        
+                <!-- <div class="comment-list">
+                    <div class="card bg-dark p-3 mb-3">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <img src="assets/images/user1.jpg" alt="User" width="50" class="rounded-circle">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="mb-1">John Doe</h6>
+                                <small class="text-muted">10 April 2025</small>
+                                <p class="mt-2 mb-0">Artikel yang sangat informatif! Terima kasih sudah berbagi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card bg-dark p-3">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <img src="assets/images/user2.jpg" alt="User" width="50" class="rounded-circle">
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="mb-1">Jane Smith</h6>
+                                <small class="text-muted">5 April 2025</small>
+                                <p class="mt-2 mb-0">Sangat membantu untuk proyek saya yang sedang berjalan.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Call <span class="text-primary">Me</span></h2>
+            
+            <div class="row">
+                <!-- Contact Info Card -->
+                <div class="col-lg-5 mb-4">
+                    <div class="card contact-info-card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title mb-4">Informasi Kontak</h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <i class="fas fa-envelope me-2 text-primary"></i>
+                                    <span>suholee1140@gmail.com</span>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-phone me-2 text-primary"></i>
+                                    <span>+62 817 7072 0264</span>
+                                </li>
+                                <li class="mb-3">
+                                    <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                                    <span>Jl. Sekip, Medan Petisah, Medan, Indonesia</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="social-media mt-4">
+                                <h5 class="mb-3">Media Sosial</h5>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/reyrmdhn.e/" class="btn btn-outline-primary btn-sm me-2"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="btn btn-outline-primary btn-sm me-2"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="btn btn-outline-primary btn-sm"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Map Section (replacing the form) -->
+                <div class="col-lg-7 mb-4">
+                    <div class="map-container h-100">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.056932926862!2d98.6628557!3d3.5970873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303131ad87f3b4f5%3A0x7d2d3a2a5070b779!2sKost%20Sekip%20Residence!5e0!3m2!1sid!2sid!4v1714451400000!5m2!1sid!2sid" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-darkblue">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5 class="mb-3"><i class="fa fa-rocket" aria-hidden="true"></i> RaihanRamadhan</h5>
+                    <p class="mb-0">Membuat solusi digital yang inovatif dan futuristik untuk bisnis Anda.</p>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5 class="mb-3">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-light">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-light">Tentang</a></li>
+                        <li class="mb-2"><a href="#services" class="text-light">Layanan</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-light">Gallery</a></li>
+                        <li><a href="#contact" class="text-light">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="mb-3">Kontak</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>suholee1140@gmail.com</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +62 817 7072 0264</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Medan, Indonesia</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 RaihanRamadhan. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Tilt.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+</body>
+</html>
